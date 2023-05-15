@@ -1,0 +1,542 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 10 and seed 9121176138627217635 with 6 workers on 12 cores with 1202MB heap and 2701MB offheap memory [pid: 9008] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file C:\Users\felix\Desktop\CLASES ERASMUS\DAT355\TLA\TPCIntersection.toolbox\Model_1\MC.tla
+Parsing file C:\Users\felix\Desktop\CLASES ERASMUS\DAT355\TLA\TPCIntersection.toolbox\Model_1\TPCIntersection.tla
+Parsing file C:\Users\felix\Desktop\CLASES ERASMUS\DAT355\TLA\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\TLC.tla
+Parsing file C:\Users\felix\Desktop\CLASES ERASMUS\DAT355\TLA\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Naturals.tla
+Parsing file C:\Users\felix\Desktop\CLASES ERASMUS\DAT355\TLA\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Sequences.tla
+Parsing file C:\Users\felix\Desktop\CLASES ERASMUS\DAT355\TLA\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\FiniteSets.tla
+Semantic processing of module TPCIntersection
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-05-07 19:42:27)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 4 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-05-07 19:42:28.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(8) at 2023-05-07 19:42:28: 160 states generated, 68 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2192:0 @!@!@
+Checking 4 branches of temporal properties for the complete state space with 272 total distinct states at (2023-05-07 19:42:28)
+@!@!@ENDMSG 2192 @!@!@
+@!@!@STARTMSG 2116:1 @!@!@
+Temporal properties were violated.
+
+@!@!@ENDMSG 2116 @!@!@
+@!@!@STARTMSG 2264:1 @!@!@
+The following behavior constitutes a counter-example:
+
+@!@!@ENDMSG 2264 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ tramLight = "S"
+/\ pedestrian = FALSE
+/\ car = FALSE
+/\ pedLight = "red"
+/\ carLight = "red"
+/\ tram = FALSE
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <TPCRandNext line 75, col 19 to line 78, col 75 of module TPCIntersection>
+/\ tramLight = "S"
+/\ pedestrian = TRUE
+/\ car = FALSE
+/\ pedLight = "red"
+/\ carLight = "red"
+/\ tram = FALSE
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <TPCRandNext line 79, col 19 to line 82, col 82 of module TPCIntersection>
+/\ tramLight = "S"
+/\ pedestrian = TRUE
+/\ car = TRUE
+/\ pedLight = "red"
+/\ carLight = "red"
+/\ tram = FALSE
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <TPCRandNext line 83, col 19 to line 86, col 81 of module TPCIntersection>
+/\ tramLight = "S"
+/\ pedestrian = TRUE
+/\ car = TRUE
+/\ pedLight = "red"
+/\ carLight = "red"
+/\ tram = TRUE
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <TNext line 52, col 13 to line 55, col 70 of module TPCIntersection>
+/\ tramLight = "-"
+/\ pedestrian = TRUE
+/\ car = TRUE
+/\ pedLight = "red"
+/\ carLight = "red"
+/\ tram = TRUE
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <TNext line 56, col 13 to line 60, col 70 of module TPCIntersection>
+/\ tramLight = "|"
+/\ pedestrian = TRUE
+/\ car = TRUE
+/\ pedLight = "red"
+/\ carLight = "red"
+/\ tram = TRUE
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2218:4 @!@!@
+7: Stuttering
+@!@!@ENDMSG 2218 @!@!@
+@!@!@STARTMSG 2267:0 @!@!@
+Finished checking temporal properties in 00s at 2023-05-07 19:42:28
+@!@!@ENDMSG 2267 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-05-07 19:42:28
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<TPCInit line 27, col 1 to line 27, col 7 of module TPCIntersection>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 27, col 12 to line 32, col 30 of module TPCIntersection: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<CNext line 34, col 1 to line 34, col 5 of module TPCIntersection (34 13 36 71)>: 2:13
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 34, col 16 to line 34, col 33 of module TPCIntersection: 90
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 34, col 16 to line 34, col 23 of module TPCIntersection: 77
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 16 to line 35, col 35 of module TPCIntersection: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 16 to line 36, col 71 of module TPCIntersection: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<CNext line 34, col 1 to line 34, col 5 of module TPCIntersection (37 13 40 71)>: 0:6
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 16 to line 37, col 19 of module TPCIntersection: 83
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 37, col 17 to line 37, col 19 of module TPCIntersection: 77
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 16 to line 38, col 34 of module TPCIntersection: 45
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 38, col 16 to line 38, col 23 of module TPCIntersection: 39
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 16 to line 39, col 32 of module TPCIntersection: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 16 to line 40, col 71 of module TPCIntersection: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<CNext line 34, col 1 to line 34, col 5 of module TPCIntersection (41 13 45 71)>: 1:1
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 41, col 16 to line 41, col 18 of module TPCIntersection: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 21, col 15 to line 21, col 29 of module TPCIntersection: 39
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 21, col 15 to line 21, col 23 of module TPCIntersection: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 21, col 34 to line 21, col 49 of module TPCIntersection: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 21, col 34 to line 21, col 41 of module TPCIntersection: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 21, col 55 to line 21, col 59 of module TPCIntersection: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 21, col 56 to line 21, col 59 of module TPCIntersection: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 21, col 64 to line 21, col 74 of module TPCIntersection: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 21, col 65 to line 21, col 74 of module TPCIntersection: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 43, col 16 to line 43, col 31 of module TPCIntersection: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 43, col 16 to line 43, col 23 of module TPCIntersection: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 44, col 16 to line 44, col 34 of module TPCIntersection: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 16 to line 45, col 71 of module TPCIntersection: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TNext line 48, col 1 to line 48, col 5 of module TPCIntersection (48 13 51 70)>: 0:4
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 48, col 16 to line 48, col 20 of module TPCIntersection: 81
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 48, col 17 to line 48, col 20 of module TPCIntersection: 77
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 16 to line 49, col 30 of module TPCIntersection: 34
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 49, col 16 to line 49, col 24 of module TPCIntersection: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 16 to line 50, col 31 of module TPCIntersection: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 16 to line 51, col 70 of module TPCIntersection: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TNext line 48, col 1 to line 48, col 5 of module TPCIntersection (52 13 55 70)>: 7:21
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 16 to line 52, col 19 of module TPCIntersection: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 53, col 16 to line 53, col 30 of module TPCIntersection: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 53, col 16 to line 53, col 24 of module TPCIntersection: 47
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 16 to line 54, col 31 of module TPCIntersection: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 16 to line 55, col 70 of module TPCIntersection: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TNext line 48, col 1 to line 48, col 5 of module TPCIntersection (56 13 60 70)>: 1:6
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 16 to line 56, col 19 of module TPCIntersection: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 19, col 15 to line 19, col 30 of module TPCIntersection: 52
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 19, col 15 to line 19, col 22 of module TPCIntersection: 46
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 19, col 35 to line 19, col 50 of module TPCIntersection: 36
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 19, col 35 to line 19, col 42 of module TPCIntersection: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 58, col 16 to line 58, col 30 of module TPCIntersection: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 58, col 16 to line 58, col 24 of module TPCIntersection: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 59, col 16 to line 59, col 31 of module TPCIntersection: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 60, col 16 to line 60, col 70 of module TPCIntersection: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<PNext line 62, col 1 to line 62, col 5 of module TPCIntersection (62 13 64 71)>: 1:12
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 16 to line 62, col 33 of module TPCIntersection: 87
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 62, col 16 to line 62, col 23 of module TPCIntersection: 75
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 16 to line 63, col 43 of module TPCIntersection: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 64, col 16 to line 64, col 71 of module TPCIntersection: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<PNext line 62, col 1 to line 62, col 5 of module TPCIntersection (65 13 68 71)>: 0:6
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 16 to line 65, col 26 of module TPCIntersection: 81
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 65, col 17 to line 65, col 26 of module TPCIntersection: 75
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 66, col 16 to line 66, col 42 of module TPCIntersection: 44
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 66, col 16 to line 66, col 23 of module TPCIntersection: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 16 to line 67, col 32 of module TPCIntersection: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 16 to line 68, col 71 of module TPCIntersection: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<PNext line 62, col 1 to line 62, col 5 of module TPCIntersection (69 13 73 71)>: 1:5
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 16 to line 69, col 25 of module TPCIntersection: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 23, col 15 to line 23, col 29 of module TPCIntersection: 42
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 23, col 15 to line 23, col 23 of module TPCIntersection: 37
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 23, col 34 to line 23, col 49 of module TPCIntersection: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 23, col 34 to line 23, col 41 of module TPCIntersection: 23
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 23, col 55 to line 23, col 59 of module TPCIntersection: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 23, col 56 to line 23, col 59 of module TPCIntersection: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 71, col 16 to line 71, col 31 of module TPCIntersection: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 71, col 16 to line 71, col 23 of module TPCIntersection: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 72, col 16 to line 72, col 34 of module TPCIntersection: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 73, col 16 to line 73, col 71 of module TPCIntersection: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TPCRandNext line 75, col 1 to line 75, col 11 of module TPCIntersection (75 19 78 75)>: 8:26
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 22 to line 75, col 32 of module TPCIntersection: 101
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 75, col 23 to line 75, col 32 of module TPCIntersection: 75
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 76, col 22 to line 76, col 37 of module TPCIntersection: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 76, col 22 to line 76, col 29 of module TPCIntersection: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 77, col 22 to line 77, col 39 of module TPCIntersection: 26
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 78, col 22 to line 78, col 75 of module TPCIntersection: 26
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TPCRandNext line 75, col 1 to line 75, col 11 of module TPCIntersection (79 19 82 82)>: 11:26
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 79, col 22 to line 79, col 25 of module TPCIntersection: 100
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 79, col 23 to line 79, col 25 of module TPCIntersection: 74
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 80, col 22 to line 80, col 37 of module TPCIntersection: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 80, col 22 to line 80, col 29 of module TPCIntersection: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 22 to line 81, col 32 of module TPCIntersection: 26
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 82, col 22 to line 82, col 82 of module TPCIntersection: 26
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TPCRandNext line 75, col 1 to line 75, col 11 of module TPCIntersection (83 19 86 81)>: 13:24
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 83, col 22 to line 83, col 26 of module TPCIntersection: 97
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 83, col 23 to line 83, col 26 of module TPCIntersection: 73
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 84, col 22 to line 84, col 36 of module TPCIntersection: 52
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 84, col 22 to line 84, col 30 of module TPCIntersection: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 85, col 22 to line 85, col 33 of module TPCIntersection: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 86, col 22 to line 86, col 81 of module TPCIntersection: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TPCRandNext line 75, col 1 to line 75, col 11 of module TPCIntersection (87 19 90 75)>: 11:12
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 87, col 22 to line 87, col 31 of module TPCIntersection: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 88, col 22 to line 88, col 61 of module TPCIntersection: 47
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 88, col 22 to line 88, col 29 of module TPCIntersection: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 88, col 35 to line 88, col 61 of module TPCIntersection: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 89, col 22 to line 89, col 40 of module TPCIntersection: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 90, col 22 to line 90, col 75 of module TPCIntersection: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TPCRandNext line 75, col 1 to line 75, col 11 of module TPCIntersection (91 19 94 82)>: 8:13
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 91, col 22 to line 91, col 24 of module TPCIntersection: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 92, col 22 to line 92, col 53 of module TPCIntersection: 48
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 92, col 22 to line 92, col 29 of module TPCIntersection: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 92, col 35 to line 92, col 53 of module TPCIntersection: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 93, col 22 to line 93, col 33 of module TPCIntersection: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 94, col 22 to line 94, col 82 of module TPCIntersection: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TPCRandNext line 75, col 1 to line 75, col 11 of module TPCIntersection (95 19 98 81)>: 3:4
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 95, col 22 to line 95, col 25 of module TPCIntersection: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 96, col 22 to line 96, col 36 of module TPCIntersection: 49
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 96, col 22 to line 96, col 30 of module TPCIntersection: 45
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 97, col 22 to line 97, col 34 of module TPCIntersection: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 98, col 22 to line 98, col 81 of module TPCIntersection: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TPCTypeOK line 11, col 1 to line 11, col 9 of module TPCIntersection>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 11, col 14 to line 16, col 63 of module TPCIntersection: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<inv_1683481347322323000 line 5, col 1 to line 5, col 23 of module MC>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 110 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 6, col 3 to line 6, col 109 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 6, col 4 to line 6, col 48 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 6, col 4 to line 6, col 19 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 6, col 24 to line 6, col 48 of module MC: 56
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 6, col 55 to line 6, col 108 of module MC: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<inv_1683481347322324000 line 9, col 1 to line 9, col 23 of module MC>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 10, col 1 to line 10, col 110 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 10, col 3 to line 10, col 109 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 10, col 4 to line 10, col 40 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 10, col 4 to line 10, col 19 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 10, col 24 to line 10, col 40 of module MC: 56
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 10, col 47 to line 10, col 108 of module MC: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<inv_1683481347322325000 line 13, col 1 to line 13, col 23 of module MC>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 14, col 1 to line 14, col 108 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 14, col 3 to line 14, col 107 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 14, col 3 to line 14, col 15 of module MC: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 14, col 21 to line 14, col 106 of module MC: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(8) at 2023-05-07 19:42:28: 160 states generated (8.743 s/min), 68 distinct states found (3.715 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+160 states generated, 68 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1107ms at (2023-05-07 19:42:28)
+@!@!@ENDMSG 2186 @!@!@

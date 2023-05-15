@@ -1,0 +1,2 @@
+# TLATraffiLightIntersection
+In order to use the code, download the toolbox for TLA+ from [Lamport's website](https://lamport.azurewebsites.net/tla/toolbox.html), and from the toolbox, open the .tla file.

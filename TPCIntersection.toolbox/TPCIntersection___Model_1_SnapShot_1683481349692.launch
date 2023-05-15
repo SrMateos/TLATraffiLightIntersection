@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
+    <stringAttribute key="configurationName" value="Model_1_SnapShot_1683481349692"/>
+    <intAttribute key="distributedFPSetCount" value="0"/>
+    <stringAttribute key="distributedNetworkInterface" value="192.168.0.47"/>
+    <intAttribute key="distributedNodesCount" value="1"/>
+    <stringAttribute key="distributedTLC" value="off"/>
+    <intAttribute key="fpIndex" value="10"/>
+    <intAttribute key="maxHeapSize" value="25"/>
+    <stringAttribute key="modelBehaviorInit" value="TPCInit"/>
+    <stringAttribute key="modelBehaviorNext" value="TPCNext"/>
+    <stringAttribute key="modelBehaviorSpec" value=""/>
+    <intAttribute key="modelBehaviorSpecType" value="2"/>
+    <stringAttribute key="modelBehaviorVars" value="tramLight, pedestrian, car, pedLight, carLight, tram"/>
+    <stringAttribute key="modelComments" value=""/>
+    <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
+    <listAttribute key="modelCorrectnessInvariants">
+        <listEntry value="1TPCTypeOK"/>
+        <listEntry value="1~((pedLight=&quot;green&quot; \/ pedLight=&quot;blinking green&quot;) /\ (tramLight=&quot;|&quot; \/ carLight=&quot;green&quot; \/ carLight=&quot;yellow&quot;))"/>
+        <listEntry value="1~((carLight=&quot;green&quot; \/ carLight=&quot;yellow&quot;) /\ (tramLight=&quot;|&quot; \/ pedLight=&quot;green&quot; \/ pedLight=&quot;blinking green&quot;))"/>
+        <listEntry value="1~(tramLight=&quot;|&quot; /\ (pedLight=&quot;green&quot; \/ pedLight=&quot;blinking green&quot; \/ carLight=&quot;green&quot; \/ carLight=&quot;yellow&quot;))"/>
+    </listAttribute>
+    <listAttribute key="modelCorrectnessProperties">
+        <listEntry value="1tram =&gt; &lt;&gt; (tramLight = &quot;|&quot;)"/>
+        <listEntry value="1pedestrian =&gt; &lt;&gt; (pedLight = &quot;green&quot;)"/>
+        <listEntry value="1car =&gt; &lt;&gt; (carLight = &quot;green&quot;)"/>
+        <listEntry value="1~car =&gt; &lt;&gt; (pedLight = &quot;green&quot;)"/>
+        <listEntry value="1Spec"/>
+    </listAttribute>
+    <intAttribute key="modelEditorOpenTabs" value="8"/>
+    <stringAttribute key="modelExpressionEval" value=""/>
+    <listAttribute key="modelParameterConstants"/>
+    <intAttribute key="modelVersion" value="20191005"/>
+    <intAttribute key="numberOfWorkers" value="6"/>
+    <stringAttribute key="result.mail.address" value=""/>
+    <stringAttribute key="specName" value="TPCIntersection"/>
+    <stringAttribute key="tlcResourcesProfile" value="local custom"/>
+</launchConfiguration>

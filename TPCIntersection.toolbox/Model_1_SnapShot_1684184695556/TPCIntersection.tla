@@ -1,9 +1,9 @@
 -------------------------- MODULE TPCIntersection --------------------------
 
 VARIABLES
-    car,  \* presence de coches en la intersection
-    tram, \* presence de trams en la intersection
-    pedestrian, \* indica si hay peatones cruzando la carretera o las tracks
+    car,
+    tram,
+    pedestrian, 
     carLight,  
     tramLight, 
     pedLight
@@ -11,14 +11,14 @@ VARIABLES
 TPCTypeOK == /\ car \in {TRUE, FALSE}
              /\ tram \in {TRUE, FALSE}
              /\ pedestrian \in {TRUE, FALSE}
-             /\ carLight \in {"red", "yellow", "green"} \* \subseteq si solo un estado
+             /\ carLight \in {"red", "yellow", "green"} 
              /\ tramLight \in {"S", "-", "|"}
-             /\ pedLight \in {"red", "green", "blinking green"} \* posibility of blinking green
+             /\ pedLight \in {"red", "green", "blinking green"}
 
 
 TClearance == carLight = "red" /\ pedLight = "red"
 
-CClearance == tramLight = "S" /\ pedLight = "red"  /\ ~tram /\ ~pedestrian \* priority case
+CClearance == tramLight = "S" /\ pedLight = "red"  /\ ~tram /\ ~pedestrian
 
 PClearance == tramLight = "S" /\ carLight = "red"  /\ ~tram
 
@@ -102,7 +102,9 @@ TPCNext == CNext \/ TNext \/ PNext \/ TPCRandNext
 
 Spec == TPCInit /\ [][TPCNext]_<<car, tram, pedestrian, carLight, tramLight, pedLight>>
 
+THEOREM Spec => []TPCTypeOK
 =============================================================================
 \* Modification History
-\* Last modified Sun May 07 18:52:04 CEST 2023 by felix
+\* Last modified Mon May 15 22:56:05 CEST 2023 by jmate
+\* Last modified Sun May 07 20:12:15 CEST 2023 by felix
 \* Created Thu May 04 12:56:43 CEST 2023 by felix

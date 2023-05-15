@@ -102,8 +102,9 @@ TPCNext == CNext \/ TNext \/ PNext \/ TPCRandNext
 
 Spec == TPCInit /\ [][TPCNext]_<<car, tram, pedestrian, carLight, tramLight, pedLight>>
 
+THEOREM Spec => []TPCTypeOK
 =============================================================================
 \* Modification History
-\* Last modified Mon May 15 21:09:42 CEST 2023 by jmate
+\* Last modified Mon May 15 22:56:05 CEST 2023 by jmate
 \* Last modified Sun May 07 20:12:15 CEST 2023 by felix
 \* Created Thu May 04 12:56:43 CEST 2023 by felix

@@ -113,12 +113,11 @@ Spec == /\ TPCInit
         /\ SF_vars(TNext)
         /\ SF_vars(PNext)
         /\ SF_vars(CNext)
-        /\ SF_vars(TPCRandNext)
 
          
 THEOREM Spec => []TPCTypeOK
 =============================================================================
 \* Modification History
-\* Last modified Fri Jun 02 20:30:17 CEST 2023 by jmate
+\* Last modified Fri Jun 02 20:15:06 CEST 2023 by jmate
 \* Last modified Sun May 07 20:12:15 CEST 2023 by felix
 \* Created Thu May 04 12:56:43 CEST 2023 by felix

@@ -2,7 +2,7 @@
 TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 107 and seed -8442020178732079844 with 6 workers on 16 cores with 1193MB heap and 2680MB offheap memory [pid: 3188] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 68 and seed 6130461502647966563 with 6 workers on 16 cores with 1193MB heap and 2680MB offheap memory [pid: 16876] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -23,7 +23,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2023-06-02 20:32:04)
+Starting... (2023-06-02 20:31:51)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2212:0 @!@!@
 Implied-temporal checking--satisfiability problem has 4 branches.
@@ -32,16 +32,16 @@ Implied-temporal checking--satisfiability problem has 4 branches.
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2023-06-02 20:32:04.
+Finished computing initial states: 1 distinct state generated at 2023-06-02 20:31:51.
 @!@!@ENDMSG 2190 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(8) at 2023-06-02 20:32:04: 160 states generated, 68 distinct states found, 0 states left on queue.
+Progress(8) at 2023-06-02 20:31:51: 160 states generated, 68 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2192:0 @!@!@
-Checking 4 branches of temporal properties for the complete state space with 272 total distinct states at (2023-06-02 20:32:04)
+Checking 4 branches of temporal properties for the complete state space with 272 total distinct states at (2023-06-02 20:31:51)
 @!@!@ENDMSG 2192 @!@!@
 @!@!@STARTMSG 2267:0 @!@!@
-Finished checking temporal properties in 00s at 2023-06-02 20:32:04
+Finished checking temporal properties in 00s at 2023-06-02 20:31:51
 @!@!@ENDMSG 2267 @!@!@
 @!@!@STARTMSG 2193:0 @!@!@
 Model checking completed. No error has been found.
@@ -50,7 +50,7 @@ Model checking completed. No error has been found.
   calculated (optimistic):  val = 3.4E-16
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2023-06-02 20:32:04
+The coverage statistics at 2023-06-02 20:31:51
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
 <TPCInit line 35, col 1 to line 35, col 7 of module TPCIntersection>: 1:1
@@ -158,7 +158,7 @@ The coverage statistics at 2023-06-02 20:32:04
   line 59, col 16 to line 59, col 30 of module TPCIntersection: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<TNext line 56, col 1 to line 56, col 5 of module TPCIntersection (60 13 63 30)>: 10:23
+<TNext line 56, col 1 to line 56, col 5 of module TPCIntersection (60 13 63 30)>: 12:23
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 60, col 16 to line 60, col 19 of module TPCIntersection: 23
@@ -176,7 +176,7 @@ The coverage statistics at 2023-06-02 20:32:04
   line 63, col 16 to line 63, col 30 of module TPCIntersection: 23
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<TNext line 56, col 1 to line 56, col 5 of module TPCIntersection (64 13 68 30)>: 1:4
+<TNext line 56, col 1 to line 56, col 5 of module TPCIntersection (64 13 68 30)>: 4:4
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 64, col 16 to line 64, col 19 of module TPCIntersection: 4
@@ -278,7 +278,7 @@ The coverage statistics at 2023-06-02 20:32:04
   line 81, col 16 to line 81, col 30 of module TPCIntersection: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (83 19 86 75)>: 6:25
+<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (83 19 86 75)>: 5:25
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 83, col 22 to line 83, col 32 of module TPCIntersection: 98
@@ -299,7 +299,7 @@ The coverage statistics at 2023-06-02 20:32:04
   line 86, col 22 to line 86, col 75 of module TPCIntersection: 25
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (87 19 90 82)>: 8:25
+<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (87 19 90 82)>: 3:25
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 87, col 22 to line 87, col 25 of module TPCIntersection: 98
@@ -320,7 +320,7 @@ The coverage statistics at 2023-06-02 20:32:04
   line 90, col 22 to line 90, col 82 of module TPCIntersection: 25
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (91 19 94 81)>: 12:22
+<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (91 19 94 81)>: 13:22
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 91, col 22 to line 91, col 26 of module TPCIntersection: 95
@@ -341,7 +341,7 @@ The coverage statistics at 2023-06-02 20:32:04
   line 94, col 22 to line 94, col 81 of module TPCIntersection: 22
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (95 19 98 75)>: 10:13
+<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (95 19 98 75)>: 12:13
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 95, col 22 to line 95, col 31 of module TPCIntersection: 13
@@ -362,7 +362,7 @@ The coverage statistics at 2023-06-02 20:32:04
   line 98, col 22 to line 98, col 75 of module TPCIntersection: 13
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (99 19 102 82)>: 12:14
+<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (99 19 102 82)>: 11:14
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 99, col 22 to line 99, col 24 of module TPCIntersection: 14
@@ -383,7 +383,7 @@ The coverage statistics at 2023-06-02 20:32:04
   line 102, col 22 to line 102, col 82 of module TPCIntersection: 14
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (103 19 106 81)>: 4:4
+<TPCRandNext line 83, col 1 to line 83, col 11 of module TPCIntersection (103 19 106 81)>: 3:4
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 103, col 22 to line 103, col 25 of module TPCIntersection: 4
@@ -407,7 +407,7 @@ The coverage statistics at 2023-06-02 20:32:04
   line 19, col 14 to line 24, col 63 of module TPCIntersection: 68
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2774:0 @!@!@
-<inv_168573072373279000 line 5, col 1 to line 5, col 22 of module MC>
+<inv_168573071066845000 line 5, col 1 to line 5, col 22 of module MC>
 @!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 6, col 1 to line 6, col 110 of module MC: 68
@@ -428,7 +428,7 @@ The coverage statistics at 2023-06-02 20:32:04
   ||line 6, col 55 to line 6, col 108 of module MC: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2774:0 @!@!@
-<inv_168573072373280000 line 9, col 1 to line 9, col 22 of module MC>
+<inv_168573071066846000 line 9, col 1 to line 9, col 22 of module MC>
 @!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 10, col 1 to line 10, col 110 of module MC: 68
@@ -449,7 +449,7 @@ The coverage statistics at 2023-06-02 20:32:04
   ||line 10, col 47 to line 10, col 108 of module MC: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2774:0 @!@!@
-<inv_168573072373281000 line 13, col 1 to line 13, col 22 of module MC>
+<inv_168573071066847000 line 13, col 1 to line 13, col 22 of module MC>
 @!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 14, col 1 to line 14, col 108 of module MC: 68
@@ -467,7 +467,7 @@ The coverage statistics at 2023-06-02 20:32:04
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(8) at 2023-06-02 20:32:04: 160 states generated (11.414 s/min), 68 distinct states found (4.851 ds/min), 0 states left on queue.
+Progress(8) at 2023-06-02 20:31:51: 160 states generated (11.779 s/min), 68 distinct states found (5.006 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 160 states generated, 68 distinct states found, 0 states left on queue.
@@ -479,5 +479,5 @@ The depth of the complete state graph search is 8.
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 4 and the 95th percentile is 3).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 846ms at (2023-06-02 20:32:04)
+Finished in 820ms at (2023-06-02 20:31:51)
 @!@!@ENDMSG 2186 @!@!@

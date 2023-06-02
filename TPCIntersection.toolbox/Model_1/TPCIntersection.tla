@@ -8,6 +8,14 @@ VARIABLES
     tramLight, 
     pedLight
 
+vars == <<car, tram, pedestrian, carLight, tramLight, pedLight>>
+
+varsC == <<tram, car, pedestrian, tramLight, pedLight>>
+
+varsP == <<tram, car, pedestrian, tramLight, carLight>>
+
+varsT == <<tram, car, pedestrian, carLight, pedLight>>
+
 TPCTypeOK == /\ car \in {TRUE, FALSE}
              /\ tram \in {TRUE, FALSE}
              /\ pedestrian \in {TRUE, FALSE}
@@ -16,7 +24,7 @@ TPCTypeOK == /\ car \in {TRUE, FALSE}
              /\ pedLight \in {"red", "green", "blinking green"}
 
 
-TClearance == carLight = "red" /\ pedLight = "red"
+TClearance == carLight = "red" /\ pedLight = "red" 
 
 CClearance == tramLight = "S" /\ pedLight = "red"  /\ ~tram /\ ~pedestrian
 
@@ -33,44 +41,44 @@ TPCInit == /\ car = FALSE
 
 CNext == \/ /\ carLight = "green"
             /\ carLight' = "yellow"
-            /\ UNCHANGED <<tram, car, pedestrian, tramLight, pedLight>>
+            /\ UNCHANGED varsC
          \/ /\ ~car
             /\ carLight = "yellow"
             /\ carLight' = "red"
-            /\ UNCHANGED <<tram, car, pedestrian, tramLight, pedLight>>
+            /\ UNCHANGED varsC
          \/ /\ car
             /\ CClearance
             /\ carLight = "red"
             /\ carLight' = "green"
-            /\ UNCHANGED <<tram, car, pedestrian, tramLight, pedLight>>
-         
+            /\ UNCHANGED varsC
+
 
 TNext == \/ /\ ~tram
             /\ tramLight = "|"
             /\ tramLight' = "S"
-            /\ UNCHANGED <<tram, car, pedestrian, carLight, pedLight>>
+            /\ UNCHANGED varsT
          \/ /\ tram
             /\ tramLight = "S"
             /\ tramLight' = "-"
-            /\ UNCHANGED <<tram, car, pedestrian, carLight, pedLight>>
+            /\ UNCHANGED varsT
          \/ /\ tram
             /\ TClearance
             /\ tramLight = "-"
             /\ tramLight' = "|"
-            /\ UNCHANGED <<tram, car, pedestrian, carLight, pedLight>>
+            /\ UNCHANGED varsT
 
 PNext == \/ /\ pedLight = "green"
             /\ pedLight' = "blinking green"
-            /\ UNCHANGED <<tram, car, pedestrian, tramLight, carLight>>
+            /\ UNCHANGED varsP
          \/ /\ ~pedestrian
             /\ pedLight = "blinking green"
             /\ pedLight' = "red"
-            /\ UNCHANGED <<tram, car, pedestrian, tramLight, carLight>>
+            /\ UNCHANGED varsP
          \/ /\ pedestrian
             /\ PClearance
             /\ pedLight = "red"
             /\ pedLight' = "green"
-            /\ UNCHANGED <<tram, car, pedestrian, tramLight, carLight>>
+            /\ UNCHANGED varsP
             
 TPCRandNext == \/ /\ ~pedestrian
                   /\ pedLight = "red"
@@ -98,13 +106,19 @@ TPCRandNext == \/ /\ ~pedestrian
                   /\ UNCHANGED <<car, pedestrian, tramLight, carLight, pedLight>>
 
 
-TPCNext == CNext \/ TNext \/ PNext \/ TPCRandNext 
+TPCNext == CNext \/ TNext \/ PNext \/ TPCRandNext
 
-Spec == TPCInit /\ [][TPCNext]_<<car, tram, pedestrian, carLight, tramLight, pedLight>>
+Spec == /\ TPCInit
+        /\ [][TPCNext]_vars
+        /\ SF_vars(TNext)
+        /\ SF_vars(PNext)
+        /\ SF_vars(CNext)
+        /\ SF_vars(TPCRandNext)
 
+         
 THEOREM Spec => []TPCTypeOK
 =============================================================================
 \* Modification History
-\* Last modified Mon May 15 22:56:05 CEST 2023 by jmate
+\* Last modified Fri Jun 02 20:30:17 CEST 2023 by jmate
 \* Last modified Sun May 07 20:12:15 CEST 2023 by felix
 \* Created Thu May 04 12:56:43 CEST 2023 by felix

@@ -110,14 +110,15 @@ TPCNext == CNext \/ TNext \/ PNext \/ TPCRandNext
 
 Spec == /\ TPCInit
         /\ [][TPCNext]_vars
-        /\ SF_vars(TNext)
-        /\ SF_vars(PNext)
-        /\ SF_vars(CNext)
+        /\ WF_vars(TNext)
+        /\ WF_vars(PNext)
+        /\ WF_vars(CNext)
+        /\ WF_vars(TPCRandNext)
 
          
 THEOREM Spec => []TPCTypeOK
 =============================================================================
 \* Modification History
-\* Last modified Fri Jun 02 20:15:06 CEST 2023 by jmate
+\* Last modified Sat Jun 03 14:13:16 CEST 2023 by jmate
 \* Last modified Sun May 07 20:12:15 CEST 2023 by felix
 \* Created Thu May 04 12:56:43 CEST 2023 by felix
